@@ -31,7 +31,7 @@ import com.digital.wallet.services.CustomerService;
 
 
 @RestController
-//@CrossOrigin
+@CrossOrigin
 @RequestMapping("/api/v1/")
 public class CustomerController {
 	@Autowired

@@ -19,7 +19,7 @@ import com.digital.wallet.modelRequests.CardInfo;
 import com.digital.wallet.services.WalletService;
 
 @RestController
-//@CrossOrigin
+@CrossOrigin
 @RequestMapping("/api/v1/wallet/")
 
 public class WalletController {

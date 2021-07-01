@@ -14,7 +14,7 @@ import com.digital.wallet.services.ConfirmationTokenService;
 import com.digital.wallet.services.RegistrationService;
 
 @RestController
-//@CrossOrigin
+@CrossOrigin
 @RequestMapping("/api/v1/")
 
 public class RegistrationController {
