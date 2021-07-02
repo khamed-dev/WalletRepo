@@ -1,13 +1,12 @@
 package com.digital.wallet;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+
 @SpringBootTest
+//@Import(CustomerControllerTest.class);
 class WalletApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+//    @Autowired CustomerController CustomerControllerTest;
 
 }
