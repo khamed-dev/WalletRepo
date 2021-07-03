@@ -55,8 +55,9 @@ public class CustomerController {
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody LoginRequest authenticationRequest) throws Exception {
 
 		final ResponseEntity<String> response = authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
-		if(response!=null) return response;
-		
+//		if(response !=null) return response;
+		if(response.equals(null)) return null;
+
 		final UserDetails userDetails = userDetailsService
 				.loadUserByUsername(authenticationRequest.getUsername());
 
@@ -77,12 +78,12 @@ public class CustomerController {
 
 	private ResponseEntity<String> authenticate(String username, String password) throws Exception {
 		try {
-		
+
 			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
-			
+
 		} catch (DisabledException e) {
 			return new ResponseEntity<>("Please confirm your registration",HttpStatus.BAD_REQUEST);
-			
+
 		} catch (BadCredentialsException e) {
 			return new ResponseEntity<>("Bad credantials",HttpStatus.BAD_REQUEST);
 		} 
