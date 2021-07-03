@@ -47,12 +47,12 @@ public class WalletServiceImpl implements WalletService {
 		float amount = transfer.getAmount();
 		String comment = transfer.getComment();
 		int pin = transfer.getPin();
-		System.out.println(userEmail);
+
 		Customer customer = customerService.findByEmail(userEmail);
-System.out.println(customer.getCustomerPin());
+
 		if(customer.getCustomerPin() != pin)
 				return error("Invalid pin "+pin);
-		System.out.println("chof hna");
+
 		Wallet wReciever = walletRepo.findByTag(toTag);
 		if (wReciever == null)
 			return error("Wallet Tag : " + toTag + " not found");
