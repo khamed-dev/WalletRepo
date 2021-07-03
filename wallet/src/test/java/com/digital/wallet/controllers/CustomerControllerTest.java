@@ -3,9 +3,7 @@ package com.digital.wallet.controllers;
 import com.digital.wallet.jwtUtils.JwtTokenProvider;
 import com.digital.wallet.modelRequests.CardInfo;
 import com.digital.wallet.modelRequests.LoginRequest;
-import com.digital.wallet.modelRequests.RegisterRequest;
 
-import com.digital.wallet.modelResponses.JwtResponse;
 import com.digital.wallet.models.Customer;
 import com.digital.wallet.models.Wallet;
 import com.digital.wallet.repositories.CustomerRepository;
@@ -19,10 +17,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.core.userdetails.UserDetails;
+
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -126,26 +123,6 @@ public class CustomerControllerTest {
         Assertions.assertNotNull(loginResponse.getContentAsString());
     }
 
-//    @Test
-//    public void shouldFailToLoginUserWithInvalidVerification() throws Exception {
-//        Wallet mockWallet2 = new Wallet(0);
-//        Customer mockCustomer2 = new Customer("reb",
-//                "muk", "rlmuk@gmail.com","123456789",
-//                Arrays.asList(mockWallet2));
-//        mockCustomer2.setEnabled(true);
-//        customerRepo.save(mockCustomer2);
-//        RequestBuilder requestBuilder = MockMvcRequestBuilders
-//                .post("http://localhost:9090/api/v1/login")
-//                .content(asJsonString(new LoginRequest("rlmuk@gmail.com","hello")
-//                ))
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .accept(MediaType.APPLICATION_JSON);
-//        MvcResult result = this.mockMvc.perform(requestBuilder).andReturn();
-//
-//        MockHttpServletResponse response = result.getResponse();
-//        assertEquals(HttpStatus.BAD_REQUEST.value(), response.getStatus());
-//    }
-
     @Test
     public void shouldFailToLoginUserWithBadCredentials() throws Exception {
         RequestBuilder requestBuilder = MockMvcRequestBuilders
@@ -209,10 +186,8 @@ public class CustomerControllerTest {
     public void shouldFailToAddCardForExpiredUser() throws Exception {
 
         CardInfo mockCard = new CardInfo(487345678, 345, "2029-03-30");
-//        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbXVrQGdtYWlsLmNvbSIsImV4cCI6MTYyNTI2NjEwOSwiaWF0IjoxNjI1MjQ4MTA5fQ.nIOBzr3eJJJ3JdnVrX7vEsblPPz5E7vZA6UiLQ4zbeL3gHb_MbKTC6IFtDTGBaf0QcfXIgo1a9_oFzlIonkcTg";
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("http://localhost:9090/api/v1/add/card")
-//                .header("Authorization", "Bearer " + token)
                 .content(asJsonString(mockCard))
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON);
