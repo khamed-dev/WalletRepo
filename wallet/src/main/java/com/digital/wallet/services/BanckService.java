@@ -11,7 +11,6 @@ import com.digital.wallet.models.Card;
 @Service
 public class BanckService {
 	private static List<BankCard> CARDS = Arrays.asList(
-<<<<<<< HEAD
 			new BankCard(5399356490908888L, 123, LocalDate.of(2020, 7, 1), 1000),
 			new BankCard(5399355748399388L, 123, LocalDate.of(2022, 12, 1), -50),
 			new BankCard(5399359383763352L, 123, LocalDate.of(2025, 3, 1), 100),
