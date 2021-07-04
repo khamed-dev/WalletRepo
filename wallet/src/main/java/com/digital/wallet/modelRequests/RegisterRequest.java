@@ -12,7 +12,6 @@ public class RegisterRequest {
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
-		this.customerPin = customerPin;
 	}
 	public String getFirstName() {
 		return firstName;
