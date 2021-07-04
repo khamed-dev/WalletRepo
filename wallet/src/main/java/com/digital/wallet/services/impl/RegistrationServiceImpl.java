@@ -46,7 +46,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 		Customer c = mapReqToCustomer(req);
 		ConfirmationToken token = new ConfirmationToken(LocalDateTime.now(), LocalDateTime.now().plusHours(10L), c);
 		
-			//emailConstructor.send(c.getLastName() +" "+ c.getFirstName(), c.getEmail(), token.getToken())
+			emailConstructor.send(c.getLastName() +" "+ c.getFirstName(), c.getEmail(), token.getToken());
 			customerRepo.save(c);
 			confirmationTokenService.save(token);
 			

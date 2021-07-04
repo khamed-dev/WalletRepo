@@ -20,7 +20,7 @@ import com.digital.wallet.modelRequests.TransferMoneyRequest;
 import com.digital.wallet.services.WalletService;
 
 @RestController
-//@CrossOrigin
+@CrossOrigin
 @RequestMapping("/api/v1/wallet/")
 
 public class WalletController {

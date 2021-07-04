@@ -139,7 +139,7 @@ public class CustomerControllerTest {
 
     @Test
     public void shouldAddCardWithValidDetails() throws Exception {
-        CardInfo mockCard = new CardInfo(1234150987, 132, LocalDate.of(2025, 3, 1).toString());
+        CardInfo mockCard = new CardInfo(4299359383763352L, 321, LocalDate.of(2025, 3, 1).toString());
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("http://localhost:9090/api/v1/add/card")
                 .header("Authorization", "Bearer " + tokenResponse)
@@ -169,7 +169,7 @@ public class CustomerControllerTest {
 
     @Test
     public void shouldFailToAddExpiredCard() throws Exception {
-        CardInfo mockCard = new CardInfo(487345678, 345, "2029-03-30");
+        CardInfo mockCard = new CardInfo(5399356490908888L, 123, "2020-03-30");
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("http://localhost:9090/api/v1/add/card")
                 .header("Authorization", "Bearer " + tokenResponse)
@@ -185,7 +185,7 @@ public class CustomerControllerTest {
     @Test
     public void shouldFailToAddCardForExpiredUser() throws Exception {
 
-        CardInfo mockCard = new CardInfo(487345678, 345, "2029-03-30");
+        CardInfo mockCard = new CardInfo(4299359383763352L, 321, "2025-03-01");
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("http://localhost:9090/api/v1/add/card")
                 .content(asJsonString(mockCard))

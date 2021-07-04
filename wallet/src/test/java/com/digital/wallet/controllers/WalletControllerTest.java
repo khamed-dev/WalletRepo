@@ -249,7 +249,7 @@ public class WalletControllerTest {
     @Test
     public void shouldTopUpWithValidCard() throws Exception {
         cardRepo.delete(mockInvalidCard);
-        Card mockCard = new Card(1234150901, 130, LocalDate.of(2032, 2, 8));
+        Card mockCard = new Card(4299350987676775L, 321, LocalDate.of(2032, 2, 8));
         mockCard.setCardHolder(mockCustomer);
         cardRepo.save(mockCard);
         RequestBuilder requestBuilder = MockMvcRequestBuilders
