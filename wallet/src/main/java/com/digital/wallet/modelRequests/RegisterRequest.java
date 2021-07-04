@@ -5,7 +5,6 @@ public class RegisterRequest {
 	private String lastName;
 	private String email;
 	private String password;
-	private int customerPin;
 	
 	public RegisterRequest(String firstName, String lastName, String email, String password, int customerPin) {
 		super();
