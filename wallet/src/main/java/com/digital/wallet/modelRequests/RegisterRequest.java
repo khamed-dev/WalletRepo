@@ -5,7 +5,6 @@ public class RegisterRequest {
 	private String lastName;
 	private String email;
 	private String password;
-	private int customerPin;
 	
 	public RegisterRequest(String firstName, String lastName, String email, String password, int customerPin) {
 		super();
@@ -39,12 +38,8 @@ public class RegisterRequest {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public int getCustomerPin() {
-		return customerPin;
-	}
-	public void setCustomerPin(int customerPin) {
-		this.customerPin = customerPin;
-	}
+	
+	
 	
 	
 
