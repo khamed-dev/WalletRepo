@@ -38,12 +38,8 @@ public class RegisterRequest {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public int getCustomerPin() {
-		return customerPin;
-	}
-	public void setCustomerPin(int customerPin) {
-		this.customerPin = customerPin;
-	}
+	
+	
 	
 	
 
