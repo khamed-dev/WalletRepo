@@ -38,6 +38,15 @@ public class Wallet {
 	@UpdateTimestamp
 	private LocalDate dateUpdated;
 
+	public Wallet(float amount, boolean isActive, long tag, Customer walletHolder, LocalDate dateCreated, LocalDate dateUpdated) {
+		this.amount = amount;
+		this.isActive = isActive;
+		this.tag = tag;
+		this.walletHolder = walletHolder;
+		this.dateCreated = dateCreated;
+		this.dateUpdated = dateUpdated;
+	}
+
 	public Wallet(float amount) {
 		super();
 		this.amount = amount;

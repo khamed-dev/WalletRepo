@@ -16,11 +16,7 @@ public class MockData {
     public static List<Customer> customerList(){
         List<Customer> customers = Arrays.asList(
                 new Customer(1L, "John", "Bull", "bull@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(0), walletList().get(1))),
-<<<<<<< HEAD
                 new Customer(2L, "Esther", "Mukungu", "mukungu@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(2), walletList().get(3))),
-=======
-                new Customer(2L, "Esther", "Mukungu", "esther@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(2), walletList().get(3))),
->>>>>>> b126adbce31d998d212548df1b59cfe7efa1c160
                 new Customer(3L, "Joe", "Biden", "biden@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(5), walletList().get(6))),
                 new Customer(4L, "Donny", "Trump", "trump@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(7))),
                 new Customer(5L, "Barack", "Obama", "obama@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(8))),
@@ -50,24 +46,24 @@ public class MockData {
 
     public  static List<Wallet> walletList(){
         List<Wallet> wallets = Arrays.asList(
-                new Wallet(1000),
-                new Wallet(2000),
-                new Wallet(3000),
-                new Wallet(4000),
+                new Wallet(1000, true, 1L, customerList().get(0), LocalDate.of(2019, 9, 01), LocalDate.of(2019, 9, 01)),
+                new Wallet(2000, true, 2L, customerList().get(0), LocalDate.of(2019, 9, 01), LocalDate.of(2019, 9, 01)),
+                new Wallet(3000, true, 3L, customerList().get(1), LocalDate.of(2019, 9, 01), LocalDate.of(2019, 9, 01)),
+                new Wallet(4000, true, 4L, customerList().get(1), LocalDate.of(2019, 9, 01), LocalDate.of(2019, 9, 01)),
                 new Wallet(5000),
-                new Wallet(500),
-                new Wallet(0),
-                new Wallet(250),
-                new Wallet(30),
-                new Wallet(790),
-                new Wallet(99),
-                new Wallet(5000),
-                new Wallet(0)
+                new Wallet(500,true, 5L, customerList().get(2), LocalDate.of(2019, 9, 01), LocalDate.of(2019, 9, 01)),
+                new Wallet(0, true, 6L, customerList().get(2), LocalDate.of(2019, 9, 01), LocalDate.of(2019, 9, 01)),
+                new Wallet(250, true, 7L, customerList().get(3), LocalDate.of(2019, 9, 01), LocalDate.of(2019, 9, 01)),
+                new Wallet(30, true, 8L, customerList().get(4), LocalDate.of(2019, 9, 01), LocalDate.of(2019, 9, 01)),
+                new Wallet(790, true, 9L, customerList().get(5), LocalDate.of(2019, 9, 01), LocalDate.of(2019, 9, 01)),
+                new Wallet(99, true, 10L, customerList().get(6), LocalDate.of(2019, 9, 01), LocalDate.of(2019, 9, 01)),
+                new Wallet(5000, true, 11L, customerList().get(7), LocalDate.of(2019, 9, 01), LocalDate.of(2019, 9, 01)),
+                new Wallet(0, true, 12L, customerList().get(8), LocalDate.of(2019, 9, 01), LocalDate.of(2019, 9, 01))
         );
         return wallets;
     }
 
-    public List<Transaction> TransactionList(){
+    public static List<Transaction> TransactionList(){
         List<Transaction> transactions = Arrays.asList(
                 new Transaction(200, 1, 2, "", LocalDateTime.of(2019, 9, 01, 02, 38)),
                 new Transaction(1, 1, 9, "", LocalDateTime.of(2019, 9, 01, 02, 38)),
