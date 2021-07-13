@@ -16,20 +16,20 @@ public class MockData {
     public static List<Customer> customerList(){
         List<Customer> customers = Arrays.asList(
                 new Customer(1L, "John", "Bull", "bull@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(0), walletList().get(1))),
-                new Customer(2L, "Esther", "Mukungu", "bull@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(2), walletList().get(3))),
-                new Customer(3L, "Joe", "Biden", "bull@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(5), walletList().get(6))),
-                new Customer(4L, "Donny", "Trump", "bull@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(7))),
-                new Customer(5L, "Barack", "Obama", "bull@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(8))),
-                new Customer(6L, "Michelle", "Stone", "bull@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(9))),
-                new Customer(7L, "Stone", "Cold", "bull@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(10))),
-                new Customer(8L, "Hulk", "Hogan", "bull@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(11))),
-                new Customer(9L, "Bubu", "Harry", "bull@gmail.com", 2002, new Card(), Arrays.asList(walletList().get(12)))
+                new Customer(2L, "Esther", "Mukungu", "mukungu@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(2), walletList().get(3))),
+                new Customer(3L, "Joe", "Biden", "biden@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(5), walletList().get(6))),
+                new Customer(4L, "Donny", "Trump", "trump@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(7))),
+                new Customer(5L, "Barack", "Obama", "obama@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(8))),
+                new Customer(6L, "Michelle", "Stone", "stone@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(9))),
+                new Customer(7L, "Stone", "Cold", "cold@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(10))),
+                new Customer(8L, "Hulk", "Hogan", "hogan@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(11))),
+                new Customer(9L, "Bubu", "Harry", "harry@gmail.com", 2002, new Card(), Arrays.asList(walletList().get(12)))
         );
 
         return customers;
     }
 
-    public List<Card> cardList(){
+    public static List<Card> cardList(){
         List<Card> cards = Arrays.asList(
                 new Card(5399356490908800L, 0011, LocalDate.of(2023, 12, 01) ),
                 new Card(5399356490908801L, 0011, LocalDate.of(2023, 12, 01) ),
@@ -44,7 +44,7 @@ public class MockData {
         return cards;
     }
 
-    public  List<Wallet> walletList(){
+    public  static List<Wallet> walletList(){
         List<Wallet> wallets = Arrays.asList(
                 new Wallet(1000),
                 new Wallet(2000),
