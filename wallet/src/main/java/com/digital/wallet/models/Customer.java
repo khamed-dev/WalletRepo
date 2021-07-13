@@ -60,6 +60,8 @@ public class Customer implements UserDetails {
 		this.wallets = wallets;
 	}
 
+
+
 	public Card getCard() {
 		return card;
 	}

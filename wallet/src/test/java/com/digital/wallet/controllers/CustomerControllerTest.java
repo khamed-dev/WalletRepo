@@ -62,9 +62,7 @@ public class CustomerControllerTest {
     @BeforeAll
     public void setUp() throws Exception{
         Wallet mockWallet = new Wallet(0);
-        Customer mockCustomer = new Customer("esther",
-                "muk", "enmuk@gmail.com","1234567890",
-                Arrays.asList(mockWallet));
+        Customer mockCustomer = new Customer("esther", "muk", "enmuk@gmail.com","1234567890", Arrays.asList(mockWallet));
         mockCustomer.setEnabled(true);
         customerRepo.save(mockCustomer);
 
