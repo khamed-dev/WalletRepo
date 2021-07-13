@@ -16,7 +16,11 @@ public class MockData {
     public static List<Customer> customerList(){
         List<Customer> customers = Arrays.asList(
                 new Customer(1L, "John", "Bull", "bull@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(0), walletList().get(1))),
+<<<<<<< HEAD
                 new Customer(2L, "Esther", "Mukungu", "mukungu@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(2), walletList().get(3))),
+=======
+                new Customer(2L, "Esther", "Mukungu", "esther@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(2), walletList().get(3))),
+>>>>>>> b126adbce31d998d212548df1b59cfe7efa1c160
                 new Customer(3L, "Joe", "Biden", "biden@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(5), walletList().get(6))),
                 new Customer(4L, "Donny", "Trump", "trump@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(7))),
                 new Customer(5L, "Barack", "Obama", "obama@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(8))),
