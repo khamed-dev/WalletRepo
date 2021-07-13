@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class MockData {
 
-    public List<Customer> customerList(){
+    public static List<Customer> customerList(){
         List<Customer> customers = Arrays.asList(
                 new Customer(1L, "John", "Bull", "bull@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(0), walletList().get(1))),
                 new Customer(2L, "Esther", "Mukungu", "bull@gmail.com", 2002, cardList().get(0), Arrays.asList(walletList().get(2), walletList().get(3))),
